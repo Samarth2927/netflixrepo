@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Auth - Black White Blue</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box" id="formBox">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="switchLogin()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="switchRegister()">Sign Up</button>
+            </div>
+
+            <form id="login" class="input-group">
+                <h1>Welcome Back</h1>
+                <p>Please enter your details</p>
+                <input type="text" class="input-field" id="loginUser" placeholder="Username" required>
+                <input type="password" class="input-field" id="loginPass" placeholder="Password" required>
+                <button type="submit" class="submit-btn shadow-blue">Log In</button>
+                <div id="loginMsg" class="message"></div>
+            </form>
+
+            <form id="register" class="input-group">
+                <h1>Create Account</h1>
+                <p>Join our premium community</p>
+                <input type="text" class="input-field" id="regUser" placeholder="Username" required>
+                <input type="email" class="input-field" id="regEmail" placeholder="Email (Optional)">
+                <input type="text" class="input-field" id="regPhone" placeholder="Phone (Optional)">
+                <input type="password" class="input-field" id="regPass" placeholder="Password" required>
+                <button type="submit" class="submit-btn shadow-blue">Sign Up</button>
+                <div id="regMsg" class="message"></div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

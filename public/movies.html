@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Watch Movies & TV Shows</title>
+    <link rel="stylesheet" href="movies.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="left-nav">
+            <h1 class="logo">NETFLIX</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">New & Popular</a></li>
+                    <li><a href="#">My List</a></li>
+                    <li><a href="#">Browse by Languages</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="right-nav">
+            <i class="fas fa-search"></i>
+            <span>Children</span>
+            <i class="fas fa-bell"></i>
+            <div class="profile-icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Profile">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 id="heroTitle">LOADING...</h1>
+                <p id="heroDesc">Fetching the latest blockbusters for you.</p>
+                <div class="hero-buttons">
+                    <button class="play-btn"><i class="fas fa-play"></i> Play</button>
+                    <button class="info-btn"><i class="fas fa-info-circle"></i> More Info</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="movie-rows">
+            <div class="row">
+                <h2>Made in India <i class="fas fa-chevron-right"></i></h2>
+                <div class="row-container scroll-container" id="row-india">
+                    <!-- Movies injected by JS -->
+                </div>
+                <button class="handle handlePrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="handle handleNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="row">
+                <h2>Get In on the Action <i class="fas fa-chevron-right"></i></h2>
+                <div class="row-container scroll-container" id="row-action">
+                    <!-- Movies injected by JS -->
+                </div>
+                <button class="handle handlePrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="handle handleNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="row">
+                <h2>Binge-worthy TV Shows <i class="fas fa-chevron-right"></i></h2>
+                <div class="row-container scroll-container" id="row-tv">
+                    <!-- Movies injected by JS -->
+                </div>
+                <button class="handle handlePrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="handle handleNext"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <div class="join-banner">
+            <button class="join-now-btn">Join Now</button>
+        </div>
+    </main>
+
+    <script src="movies.js"></script>
+</body>
+
+</html>
