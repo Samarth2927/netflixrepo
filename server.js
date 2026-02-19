@@ -74,18 +74,23 @@ app.post('/api/login', async (req, res) => {
             return res.status(401).json({ error: 'Invalid username or password' });
         }
 
-        // Config endpoint to provide API key to frontend
-        app.get('/api/config', (req, res) => {
-            res.json({
-                omdbApiKey: process.env.OMDB_API_KEY || null
-            });
-        });
-
         res.json({ message: 'Login successful', user: { id: user.id, username: user.username } });
     } catch (err) {
         console.error('Login error:', err);
         res.status(500).json({ error: 'Internal server error' });
     }
+});
+
+// Config endpoint to provide API key to frontend
+app.get('/api/config', (req, res) => {
+    res.json({
+        omdbApiKey: process.env.OMDB_API_KEY || null
+    });
+});
+    } catch (err) {
+    console.error('Login error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+}
 });
 
 const PORT = process.env.PORT || 3000;
