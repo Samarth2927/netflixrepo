@@ -5,3 +5,4 @@ users_list.csv
 .gemini/
 .agent/
 brain/
+public/config.js

@@ -1,4 +1,4 @@
-const API_KEY = '856e31c5';
+const API_KEY = CONFIG.OMDB_API_KEY;
 const BASE_URL = 'https://www.omdbapi.com/';
 
 const categories = {
