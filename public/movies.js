@@ -1,4 +1,4 @@
-const API_KEY = CONFIG.OMDB_API_KEY;
+let API_KEY = window.CONFIG ? CONFIG.OMDB_API_KEY : null;
 const BASE_URL = 'https://www.omdbapi.com/';
 
 const categories = {
@@ -7,9 +7,24 @@ const categories = {
     'tv': 'Netflix'
 };
 
-async function fetchMovies(search) {
+async function getApiKey() {
+    if (API_KEY) return API_KEY;
     try {
-        const response = await fetch(`${BASE_URL}?s=${search}&apikey=${API_KEY}`);
+        const response = await fetch('/api/config');
+        const data = await response.json();
+        API_KEY = data.omdbApiKey;
+        return API_KEY;
+    } catch (error) {
+        console.error("Failed to fetch API key from server:", error);
+        return null;
+    }
+}
+
+async function fetchMovies(search) {
+    const key = await getApiKey();
+    if (!key) return [];
+    try {
+        const response = await fetch(`${BASE_URL}?s=${search}&apikey=${key}`);
         const data = await response.json();
         return data.Search || [];
     } catch (error) {

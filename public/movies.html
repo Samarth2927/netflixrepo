@@ -81,7 +81,8 @@
         </div>
     </main>
 
-    <script src="config.js"></script>
+    <!-- config.js is optional for local development, Render uses Environment Variables -->
+    <script src="config.js" onerror="console.log('config.js not found, falling back to server API')"></script>
     <script src="movies.js"></script>
 </body>
 
