@@ -87,11 +87,6 @@ app.get('/api/config', (req, res) => {
         omdbApiKey: process.env.OMDB_API_KEY || null
     });
 });
-    } catch (err) {
-    console.error('Login error:', err);
-    res.status(500).json({ error: 'Internal server error' });
-}
-});
 
 const PORT = process.env.PORT || 3000;
 initDB().then(() => {
